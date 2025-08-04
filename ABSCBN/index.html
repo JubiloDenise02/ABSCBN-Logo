@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABS-CBN Logo in Canvas</title>
+
+    <style>
+        canvas {
+            border: 3px solid black; 
+            margin: 3rem;
+            margin-left: 28rem;
+            background-color: whitesmoke;
+        }
+    </style>
+
+    <script>
+        function pageload()
+        {
+            let canvas = document.getElementById("mycanvas")
+            let ctx = canvas.getContext("2d")
+             
+            ctx.beginPath();
+            ctx.arc(300, 230, 200, 0.5 * Math.PI, 2.5 * Math.PI)
+            ctx.fillStyle = "#e61515";
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(300, 230, 165, 0.5 * Math.PI, 2.5 * Math.PI)
+            ctx.fillStyle = "whitesmoke";
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(300, 230, 145, 0.5 * Math.PI, 2.5 * Math.PI)
+            ctx.fillStyle = "#12a141";
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(300, 230, 110, 0.5 * Math.PI, 2.5 * Math.PI)
+            ctx.fillStyle = "whitesmoke";
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(300, 230, 90, 0.5 * Math.PI, 2.5 * Math.PI)
+            ctx.fillStyle = "#1467a6";
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(300, 230, 55, 0.5 * Math.PI, 2.5 * Math.PI)
+            ctx.fillStyle = "whitesmoke";
+            ctx.fill();
+
+            ctx.clearRect(275, 250, 50, 300)
+            ctx.fillStyle = "black";
+            ctx.fillRect(285, 230, 30, 210) 
+
+            ctx.font = "bold 110px Rotis"
+            ctx.fillText("ABS-CBN", 67, 550)
+        }
+
+    </script>
+</head>
+<body onload="pageload()">
+    <canvas width="600" height="600" id="mycanvas"></canvas>
+</body>
+</html>
